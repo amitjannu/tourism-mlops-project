@@ -7,16 +7,12 @@ on:
 
 jobs:
   train-and-test:
-
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v5
 
-    - name: Checkout Repository
-      uses: actions/checkout@v5
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - uses: actions/setup-python@v5
       with:
         python-version: "3.10"
 
@@ -28,6 +24,6 @@ jobs:
       run: |
         python --version
 
-    - name: Show Repository Structure
+    - name: Show Files
       run: |
         ls -R
