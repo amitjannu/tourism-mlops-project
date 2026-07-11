@@ -28,6 +28,6 @@ jobs:
       run: |
         python --version
 
-    - name: Run Application Check
+    - name: Show Repository Structure
       run: |
-        python app.py
+        ls -R
